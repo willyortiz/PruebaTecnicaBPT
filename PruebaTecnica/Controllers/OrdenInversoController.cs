@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace PruebaTecnica.Controllers
 {
+    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     [RoutePrefix("api/orden_inverso")]
     public class OrdenInversoController : ApiController
     {
